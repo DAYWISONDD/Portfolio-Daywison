@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+main {
+    padding: 30px;
+    margin-left: 70px
+    
+}
+
+header {
+
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(35, 43, 87);
+    position: fixed;
+    z-index: 2000;
+    
+
+
+}
+
+.container {
+    width: 1300px;
+    height: 100%;
+    display: flex;
+    margin: 0;
+
+
+
+}
+
+.logo {
+    width: 94px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+
+    img {
+        width: 89%;
+        height: auto;
+        border-radius: 25px;
+
+    }
+}
+
+.meunome {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    font-weight: bold;
+}
+
+.menu {
+    width: 50%;
+    height: 100%;
+
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 5px;
+
+}
+
+nav {
+    height: 100%;
+}
+
+
+nav a:hover {
+    background-color: #c9f4f4;
+    color: rgb(3, 14, 112);
+}
+
+nav li {
+    list-style: none;
+    padding: 10px 15px;
+    color: azure;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: azure;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lateral {
+    position: fixed;
+    top: 79px;
+    left: 0;
+    width: 70px;
+    height: calc(100vh - 80px);
+    /* corrigido: desconta a altura do header */
+    background-color: rgb(35, 43, 87);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    /* reduzido — o top:80px já posiciona certo */
+    border-radius: 0px 10px 10px 0px;
+    box-sizing: border-box;
+    transition: width 0.3s ease;
+
+
+}
+.lateral.open {
+    width: 220px;
+}
+
+span {
+    text-align: center;
+    font-size: 14px;
+    width: 0px;
+    overflow: hidden;
+     
+     transition: width 0.3s ease;
+}
+
+.lateral.open span {
+    width: 140px;                  
+    margin-left: 8px;
+}
+
+#open {
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    background-color: rgb(35, 43, 87);
+    color: azure;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    /* garante que o botão fique acima de outros elementos */
+}
+
+
+
+section.secao1 {
+    margin: 0 0 0 400px;
+    width: 400px;
+    height: 400px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;   /* pro vídeo se ancorar aqui dentro */
+    overflow: hidden;     /* corta o excesso do vídeo que passar da altura */
+   
+}
+
+
+
+.overlay {
+    position: relative;
+    width: 600px;
+    height: 400px;
+     
+}
+
+.perfil {
+    width: 100%;
+    height: 60px;
+    background-color: blue;
+}
+
+.foto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100%;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.4s ease;
+    
+}
+
+.foto:hover {
+    opacity: 0;
+}
+
+.foto img {
+    width: 400px;
+    height: auto;
+}
+
+.resumo {
+    width: 400px;
+    /* em vez de 600px — agora preenche o .overlay inteiro, igual o .foto faz */
+    height: 100%;   
+    background-color: rgb(35, 43, 87);
+    box-sizing: border-box;
+    
+}
+
+.resumo h2 {
+    color: azure;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+.resumo p {
+    color: azure;
+    font-size: 13px;
+    padding: 10px;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.linha {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.titulo {
+    width: fit-content;
+    margin: 0 auto;    /* centraliza a caixa na página */
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid rgb(22, 24, 138);
+    padding: 10px;  
+    background-color: rgb(35, 43, 87);
+    cursor: pointer;
+}
+.titulo:hover {
+    background-color: #c9f4f4;
+    color: rgb(35, 43, 87);
+    border: 2px solid rgb(35, 43, 87);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.formacao {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    
+    
+}
+.formacao-item1, .formacao-item2, .formacao-item3 {
+    display: flex;
+    overflow-x: auto; /* barra de rolagem horizontal */
+    scroll-snap-type: x mandatory; /* ativação do encaixe magnético - da rolagem*/
+    gap: 15px;
+    width: 600px;
+    height: 100%;
+    
+   
+}
+
+
+.formacao-item1 > div {
+    flex: 0 0 100%;         /* cada slide ocupa a largura toda do carrossel */
+    scroll-snap-align: center; /* cada slide se alinha ao scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    box-sizing: border-box;
+
+    
+}
+.formacao-item2 > div {
+    flex: 0 0 100%;         /* cada slide ocupa a largura toda do carrossel */
+    scroll-snap-align: center; /* cada slide se alinha ao scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.formacao-item3 > div {
+    flex: 0 0 100%;         /* cada slide ocupa a largura toda do carrossel */
+    scroll-snap-align: center; /* cada slide se alinha ao scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+.formacao-item1 img, .formacao-item2 img, .formacao-item3 img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+   
+}
+
+.formacao-item1 > div,
+.formacao-item2 > div,
+.formacao-item3 > div {
+    box-shadow: 0 4px 14px rgba(35, 43, 87, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.formacao-item1 > div:hover,
+.formacao-item2 > div:hover,
+.formacao-item3 > div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(35, 43, 87, 0.3);
+}
+
+.div-grad1 img,
+.div-pos1-concluida img,
+.div-pos2-concluida img {
+    filter: grayscale(100%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.div-grad1 img:hover,
+.div-pos1-concluida img:hover,
+.div-pos2-concluida img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+
+    
+    
+    
