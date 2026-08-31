@@ -1,4 +1,4 @@
 document.querySelector(".open").addEventListener("click", function() {
-    document.querySelector(".lateral").classList.toggle("open");
+    document.querySelector(".sidebar").classList.toggle("open");
     
 })
