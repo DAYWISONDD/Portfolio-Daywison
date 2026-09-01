@@ -14,21 +14,26 @@
 </head>
 
 <body class="video">
+
     <div class="tela-video">
-        <video id="video" autoplay muted playsinline>
+        <video id="fundo" autoplay muted loop playsinline class="video-fundo">
+            <source src="IMAGE/fundo.mp4" type="video/mp4">
+        </video>
+        <video id="video" autoplay muted playsinline class="video-frente">
             <source src="IMAGE/curser.mp4" type="video/mp4">
         </video>
-    </div>
-
-    <div class="wellcome">
+        <div class="wellcome">
         <h1>Seja bem-vindo ao meu mundo!</h1>
         <div class="button">
-           <button>
-            <a href="index.html" class="botao-entrar">Clique aqui para conhecer</a>
-        </button> 
+            
+                <a href="index.html" class="botao-entrar">Clique aqui para conhecer</a>
+           
         </div>
-        
+
     </div>
+    </div>
+
+    
 
     <script src="script.js"></script>
 </body>
